@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package com.sdtp.grpc;
+
+service DocumentProcessor {
+  rpc Process(DocumentRequest) returns (DocumentResponse);
+}
+
+message DocumentRequest {
+  string documentId = 1;
+}
+
+message DocumentResponse {
+  string documentId = 1;
+  string status = 2;
+}
